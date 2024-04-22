@@ -27,8 +27,8 @@ public class SeleniumRunner {
     }
 
     public void setUp() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver/chromedriver.exe"); //windows
-//        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver/chromedriver"); //ubuntu
+//        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver/chromedriver.exe"); //windows
+        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver/chromedriver"); //ubuntu
         ChromeOptions options = new ChromeOptions();
 //        options.setBinary("./src/main/resources/chromedriver/chrome-linux64/chrome"); // ubuntu
         options.setBinary(chromePath); // windows
