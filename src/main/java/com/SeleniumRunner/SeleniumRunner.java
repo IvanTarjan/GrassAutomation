@@ -41,18 +41,25 @@ public class SeleniumRunner {
 
     public void login() {
         Login loginPage = new Login(driver , wait);
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         loginPage.InsertUsername(username);
+        System.out.println("Inserted Username");
         loginPage.InsertPassword(password);
+        System.out.println("Inserted Password");
         loginPage.ClickLogin();
         System.out.println(loginPage.GetDashboardText());
         try {
-            Thread.sleep(5000);
+            Thread.sleep(15000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         driver.navigate().to("chrome-extension://ilehaonighjijnmpnagapkhpcdbhclfg/index.html");
         try {
-            Thread.sleep(10000);
+            Thread.sleep(15000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
