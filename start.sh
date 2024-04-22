@@ -21,11 +21,11 @@ sudo rm google-chrome-stable_123.0.6312.122-1_amd64.deb
 cd ./GrassAutomation
 
 # Install Java 18
-
 sudo apt-get -y install openjdk-18-jdk
 
 # verify java 
 java -version
+
 # verify javac
 javac -version
 
