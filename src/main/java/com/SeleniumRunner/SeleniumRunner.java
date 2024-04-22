@@ -51,6 +51,11 @@ public class SeleniumRunner {
         loginPage.InsertPassword(password);
         System.out.println("Inserted Password");
         loginPage.ClickLogin();
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println(loginPage.GetDashboardText());
         try {
             Thread.sleep(15000);
