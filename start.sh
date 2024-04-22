@@ -20,14 +20,18 @@ cd ./GrassAutomation
 
 # Install Java 21 with JRE
 sudo apt-cache search openjdk
-sudo apt -y install default-jre
-sudo apt-get -y install openjdk-21-jdk
-apt --fix-broken install
+sleep 1 
+sudo apt -y install default-jre 
+sleep 1
+sudo apt-get -y install openjdk-21-jdk 
+apt --fix-broken install -y 
 
 # verify java 
 java -version
 # verify javac
 javac -version
+sleep 2
+sudo apt-get -y install openjdk-21-jdk 
 
 # Install Maven Apache
 sudo apt -y install maven
