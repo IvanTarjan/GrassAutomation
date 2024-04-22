@@ -13,6 +13,10 @@ public class Login extends BasePage {
 
     private final By loginButton = By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div/form/button");
 
+    private final By dashboardText = By.xpath("/html/body/div[1]/div[1]/aside/div[2]/div/div[1]/a[1]/div[2]/div/p");
+
+    private final By goToDashboard = By.xpath("//*[@id=\"root\"]/div/div/main/div/div[2]/div[3]/a/button");
+
     public Login(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
@@ -27,5 +31,13 @@ public class Login extends BasePage {
 
     public void ClickLogin(){
         this.clickear(loginButton);
+    }
+
+    public String GetDashboardText(){
+        return this.getText(dashboardText);
+    }
+
+    public String GoToDashboardText(){
+        return this.getText(goToDashboard);
     }
 }

@@ -27,14 +27,12 @@ public class SeleniumRunner {
     }
 
     public void setUp() throws InterruptedException {
-//        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver/chromedriver.exe"); //windows
-        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver/chromedriver"); //ubuntu
+
         ChromeOptions options = new ChromeOptions();
-//        options.setBinary("./src/main/resources/chromedriver/chrome-linux64/chrome"); // ubuntu
-        options.setBinary(chromePath); // windows
+
         options.addExtensions(new File("./src/main/resources/chromedriver/Grass-Extension.crx"));
         options.addArguments("--remote-allow-origins=*");
-        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--no-sandbox", "--disable-dev-shm-usage");
+        options.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--no-sandbox", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
 
         wait = new WebDriverWait(driver, Duration.ofMillis(2000));
@@ -48,12 +46,19 @@ public class SeleniumRunner {
         loginPage.InsertUsername(username);
         loginPage.InsertPassword(password);
         loginPage.ClickLogin();
+        System.out.println(loginPage.GetDashboardText());
         try {
-            Thread.sleep(8000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         driver.navigate().to("chrome-extension://ilehaonighjijnmpnagapkhpcdbhclfg/index.html");
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(loginPage.GoToDashboardText());
     }
 
 }
