@@ -34,7 +34,7 @@ public class SeleniumRunner {
         options.setBinary(chromePath); // windows
         options.addExtensions(new File("./src/main/resources/chromedriver/Grass-Extension.crx"));
         options.addArguments("--remote-allow-origins=*");
-//        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--no-sandbox", "--disable-dev-shm-usage");
+        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--no-sandbox", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
 
         wait = new WebDriverWait(driver, Duration.ofMillis(2000));
