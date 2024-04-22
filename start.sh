@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #initial update
-sudo apt update && sudo apt upgrade -y
+sudo apt -y update
 
 # install unzip
-sudo apt install unzip
+sudo apt -y install unzip 
 
 #download outside repo
 cd ../
@@ -21,8 +21,8 @@ sudo rm google-chrome-stable_123.0.6312.122-1_amd64.deb
 cd ./GrassAutomation
 
 # Install Java 18
-sudo apt install -y default-jre 
-sudo apt-get install -y openjdk-18-jdk
+
+sudo apt-get -y install openjdk-18-jdk
 
 # verify java 
 java -version
@@ -30,7 +30,7 @@ java -version
 javac -version
 
 # Install Maven Apache
-sudo apt install maven -y
+sudo apt -y install maven 
 
 # verify maven
 mvn --version
