@@ -17,6 +17,7 @@ sudo dpkg -i google-chrome-stable_123.0.6312.122-1_amd64.deb
 sudo rm google-chrome-stable_123.0.6312.122-1_amd64.deb
 
 cd ./GrassAutomation
+apt --fix-broken install
 
 # Install Java 21 with JRE
 sudo apt-cache search openjdk
@@ -25,7 +26,6 @@ sudo apt-get -y install openjdk-21-jdk
 
 # verify java 
 java -version
-
 # verify javac
 javac -version
 
