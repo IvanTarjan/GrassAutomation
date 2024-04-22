@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login extends BasePage {
 
-    private final By usernameField = By.name("user");
+    private final By usernameField = By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div/form/div[2]/div[1]/div/input");
 
-    private final By passwordField = By.name("password");
+    private final By passwordField = By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div/form/div[2]/div[2]/div/input");
 
     private final By loginButton = By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div/form/button");
 
