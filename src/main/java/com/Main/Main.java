@@ -5,12 +5,10 @@ import com.SeleniumRunner.SeleniumRunner;
 
 public class Main {
     public static void main(String[] args) {
-        String chromePath = args[0];
-        System.out.println(chromePath);
-        String username = args[1];
-        String password = args[2];
+        String username = args[0];
+        String password = args[1];
         System.out.println("Starting");
-        SeleniumRunner testsFront = new SeleniumRunner(chromePath, username, password);
+        SeleniumRunner testsFront = new SeleniumRunner(username, password);
         try {
             testsFront.setUp();
             testsFront.login();

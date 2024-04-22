@@ -12,7 +12,6 @@ import java.time.Duration;
 public class SeleniumRunner {
 
     public WebDriver driver;
-    public String chromePath;
     public WebDriverWait wait;
 
     public String username;
@@ -20,8 +19,7 @@ public class SeleniumRunner {
     public String password;
 
 
-    public SeleniumRunner(String chromePath, String username, String password) {
-        this.chromePath = chromePath;
+    public SeleniumRunner( String username, String password) {
         this.username = username;
         this.password = password;
     }
