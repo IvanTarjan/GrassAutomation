@@ -44,3 +44,5 @@ sudo apt install maven -y
 # verify maven
 mvn --version
 
+http://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_123.0.6312.122-1_amd64.deb
+
