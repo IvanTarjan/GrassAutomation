@@ -16,6 +16,7 @@ unzip chrome-linux64.zip
 # Cleanup
 rm chrome-linux64.zip
 #headless rm chrome-headless-shell-linux64.zip
+cd ./GrassAutomation
 
 # Download chromedriver
 # wget https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.122/linux64/chromedriver-linux64.zip
@@ -39,4 +40,4 @@ sudo apt install maven -y
 
 # verify maven
 mvn --version
-cd ./GrassAutomation
+
