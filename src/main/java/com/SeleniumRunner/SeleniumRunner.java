@@ -28,10 +28,10 @@ public class SeleniumRunner {
 
     public void setUp() throws InterruptedException {
 //        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver/chromedriver.exe"); //windows
-        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver/chromedriver"); //ubuntu
+//        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver/chromedriver"); //ubuntu
         ChromeOptions options = new ChromeOptions();
 //        options.setBinary("./src/main/resources/chromedriver/chrome-linux64/chrome"); // ubuntu
-        options.setBinary(chromePath); // windows
+//        options.setBinary(chromePath); // windows
         options.addExtensions(new File("./src/main/resources/chromedriver/Grass-Extension.crx"));
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--no-sandbox", "--disable-dev-shm-usage");
